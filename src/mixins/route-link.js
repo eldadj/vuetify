@@ -2,12 +2,18 @@ export default {
   props: {
     append: Boolean,
     disabled: Boolean,
-    href: [String, Object],
+    href: {
+      type: [String, Object],
+      default: '#'
+    },
     nuxt: Boolean,
     replace: Boolean,
     ripple: Boolean,
     router: Boolean,
-    tag: String
+    tag: {
+      type: String,
+      default: 'a'
+    }
   },
 
   methods: {
@@ -36,8 +42,8 @@ export default {
         data.props.replace = this.replace
         data.nativeOn = { click: this.click }
       } else {
-        tag = this.tag || 'a'
-        data.attrs.href = this.href || 'javascript:;'
+        tag = this.tag
+        data.attrs.href = this.href
         data.on = { click: this.click }
       }
 
