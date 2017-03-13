@@ -35,6 +35,7 @@ export default {
     offsetY: Boolean,
     disabled: Boolean,
     maxHeight: {
+      type: Number,
       default: null
     },
     nudgeXAuto: {

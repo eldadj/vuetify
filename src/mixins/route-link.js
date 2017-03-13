@@ -4,7 +4,7 @@ export default {
     disabled: Boolean,
     href: {
       type: [String, Object],
-      default: '#'
+      default: 'javascript:;'
     },
     nuxt: Boolean,
     replace: Boolean,
